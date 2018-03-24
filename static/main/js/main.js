@@ -50,12 +50,22 @@ $(document).ready(function () {
 
             var regexp = new RegExp(regexp_str, flags);
             var result;
+            var result_str = '';
 
             result = str.match(regexp);
+            console.log(result);
 
             regexp_result.html(regexp);
             str_result.html(str);
-            str_search_result.html(result);
+            for(i = 0; i < result.length; i++){
+                if(i == result.length - 1){
+                    result_str += result[i];
+                } else{
+                    result_str += result[i] + ', ';
+                }
+                console.log(result_str);
+            }
+            str_search_result.html(result_str);
 
             validate = false;
         }
