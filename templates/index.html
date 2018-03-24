@@ -24,34 +24,41 @@
         <div class="row align-items-start justify-content-around top-block">
             <div class="col-lg-10">
                 <h1 class="title">Hello, World!!!</h1>
-                <h3 class="title-after">Вводи регулярное выражение и текст в соответствующие поля.
-                                        Результатом будет поиск по паттерну в твоём тексте/строке.</h3>
+                <h3 class="title-after">Вводи регулярное выражение (без /,~,@), флаги и строку в соответствующие поля.
+                                        Результатом будет поиск по паттерну в твоей строке.</h3>
                 <h2 class="title-after">Эксперементируй!</h2>
             </div>
         </div>
         <div class="row justify-content-around main-block">
             <div class="col-lg-5 form-block">
-                <form>
-                    <div class="block-wrapper">
-                        <label>RegExp:</label>
-                        <input>
-                    </div>
-                    <div class="block-wrapper">
-                        <label>Str:</label>
-                        <input>
-                    </div>
-                    <div class="block-wrapper">
-                        <button>Find</button>
-                    </div>
-                </form>
+                <div class="block-wrapper">
+                    <label for="regexp_input">RegExp:</label>
+                    <input id="regexp_input" type="text">
+                    <input id="flags_input" type="text">
+                </div>
+                <div class="block-wrapper">
+                    <label for="str_input">Str:</label>
+                    <input id="str_input" type="text">
+                </div>
+                <div class="block-wrapper">
+                    <button id="button_find">Find</button>
+                </div>
+                <div class="block-wrapper" id="error_block">
+                    <span id="regexp_input_error">Введите Ваш RegExp!<br></span>
+                    <span id="str_input_error">Введите строку!<br></span>
+                    <span id="flags_input_error">Введён некорректный флаг!</span>
+                </div>
             </div>
             <div class="col-lg-5 result-block">
                 <div class="result-block">
-                    <div id="regexp">
-
+                    <div class="result">
+                        <p id="regexp_result"></p>
                     </div>
-                    <div id="str">
-
+                    <div class="result">
+                        <p id="str_result"></p>
+                    </div>
+                    <div class="result">
+                        <p id="str_search_result"></p>
                     </div>
                 </div>
             </div>

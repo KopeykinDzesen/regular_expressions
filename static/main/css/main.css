@@ -12,19 +12,19 @@ html, body, .wrapper-container {
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     color: #f15858;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
 }
 
 .top-block {
@@ -35,15 +35,16 @@ h3 {
 .main-block {
     background-color: #fbf8f8;
     text-align: center;
-    height: 100%;
-    padding-top: 20px;
+    height: auto;
+    padding-top: 30px;
 }
 
 .block-wrapper {
     position: relative;
-    margin: 50px auto;
+    margin: 40px auto;
     width: 400px;
-    height: 50px;
+    height: 40px;
+    display: flex;
 }
 
 .block-wrapper label {
@@ -65,11 +66,26 @@ h3 {
     box-shadow: 0 0 15px black;
 }
 
+#regexp_input {
+    width: 320px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: 1px solid black;
+}
+
+#flags_input {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: 1px solid black;
+    padding: 0 3%;
+}
+
 .block-wrapper button {
     width: 50%;
     height: 80%;
     border-radius: 10px;
     border: 2px solid black;
+    margin: auto;
 }
 
 .block-wrapper button:hover {
@@ -80,3 +96,41 @@ h3 {
 .block-wrapper button:focus {
     outline: none;
 }
+
+#error_block {
+    display: block;
+    margin-top: -40px;
+}
+
+#error_block span {
+    color: coral;
+}
+
+#regexp_input_error {
+    display: none;
+}
+
+#str_input_error {
+    display: none;
+}
+
+#flags_input_error {
+    display: none;
+}
+
+.result {
+    margin: 30px 0 0;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+}
+
+.result p {
+    margin: 0;
+}
+
+#regexp_result {
+    font-size: 1.5rem;
+}
+
